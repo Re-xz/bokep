@@ -10,14 +10,14 @@ from logging.handlers import RotatingFileHandler
 
 load_dotenv("config.env")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "6325594724:AAH-2SZRoxVdpbirNhXlyG5-uwlE7HU43CQ")
 
-APP_ID = int(os.environ.get("APP_ID", "28653571"))
+APP_ID = int(os.environ.get("APP_ID", "29486311"))
 
-API_HASH = os.environ.get("API_HASH", "eca35c0338b15aa33cc2d5df4a5a7b65")
+API_HASH = os.environ.get("API_HASH", "ffdc688dc4eee8d2585cb24155188432")
 
-CHANNEL_DB = int(os.environ.get("CHANNEL_DB", ""))
-OWNER = os.environ.get("OWNER", "excute7")
+CHANNEL_DB = int(os.environ.get("CHANNEL_DB", "-1001950756152"))
+OWNER = os.environ.get("OWNER", "skandal")
 PROTECT_CONTENT = strtobool(os.environ.get("PROTECT_CONTENT", "True"))
 
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -26,25 +26,26 @@ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 UPSTREAM_BRANCH = os.environ.get("UPSTREAM_BRANCH", "master")
 
 # Database type
-DATABASE_TYPE = os.getenv("DATABASE_TYPE", "")
+DATABASE_TYPE = os.getenv("DATABASE_TYPE", "sql")
 
 # Database SQL
-DB_URI = os.getenv("DB_URL", "")
+DB_URI = os.getenv("DB_URL", "postgres://tlmyyost:P2inlcCa4QcIWDD0QvlleYEkGsjBAX2I@flora.db.elephantsql.com/tlmyyost")
 
 # Database MongoDB
 MONGO_NAME = os.getenv("MONGO_NAME", "")
 MONGO_URL = os.getenv("MONGO_URL", "")
 
 
-FORCE_SUB_ = {}
-FSUB_TOTAL = 1
+FORCE_SUB_1 = {-1002037994205}
+FORCE_SUB_2 = {-1002018123667}
+FSUB_TOTAL = 2
 while True:
     key = f"FORCE_SUB_{FSUB_TOTAL}"
     value = os.getenv(key)
     if value is None:
         break
     FORCE_SUB_[FSUB_TOTAL] = int(value)
-    FSUB_TOTAL += 1
+    FSUB_TOTAL += 2
 
 BUTTON_ROW = int(os.getenv("BUTTON_ROW", 3))
 
@@ -55,7 +56,7 @@ START_MSG = os.environ.get(
     "<b>Hello {first}</b>\n\n<b>Saya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>",
 )
 try:
-    ADMINS = [int(x) for x in (os.environ.get("ADMINS", "").split())]
+    ADMINS = [int(x) for x in (os.environ.get("ADMINS", "1707380693").split())]
 except ValueError:
     raise Exception("Daftar Admin Anda tidak berisi User ID Telegram yang valid.")
 
